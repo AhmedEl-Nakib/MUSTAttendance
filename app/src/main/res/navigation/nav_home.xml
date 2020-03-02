@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_home"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.mustattendance.fragments.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_completeProfile"
+            app:destination="@id/completeProfile"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/completeProfile"
+        android:name="com.example.mustattendance.fragments.CompleteProfile"
+        android:label="fragment_complete_profile"
+        tools:layout="@layout/fragment_complete_profile" >
+        <action
+            android:id="@+id/action_completeProfile_to_studentHome"
+            app:destination="@id/studentHome"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentHome"
+        android:name="com.example.mustattendance.fragments.StudentHome"
+        android:label="fragment_student_home"
+        tools:layout="@layout/fragment_student_home" >
+        <action
+            android:id="@+id/action_studentHome_to_about"
+            app:destination="@id/about" />
+        <action
+            android:id="@+id/action_studentHome_to_subjectSchedules"
+            app:destination="@id/subjectSchedules" />
+    </fragment>
+    <fragment
+        android:id="@+id/about"
+        android:name="com.example.mustattendance.fragments.About"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/subjectSchedules"
+        android:name="com.example.mustattendance.fragments.subjectSchedules.SubjectSchedules"
+        android:label="fragment_subject_schedules"
+        tools:layout="@layout/fragment_subject_schedules" />
+</navigation>
